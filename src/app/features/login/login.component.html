@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="toggle">
+    <span *ngIf="haveAcc===true" class="text">If you have't account please</span>
+    <button *ngIf="haveAcc===true" mat-raised-button (click)="accStatus(false)">Sing Up</button>
+    <span *ngIf="haveAcc===false" class="text">If you have account please</span>
+    <button *ngIf="haveAcc===false" mat-raised-button (click)="accStatus(true)">Sign In</button>
+  </div>
+  <div class="form">
+    <form [formGroup]="formGroup" class="login-form" (input)="onFormChange()" (ngSubmit)="onSubmit()">
+      <div class="login-form__title">
+        <h1 *ngIf="haveAcc===true">Authorization</h1>
+        <h1 *ngIf="haveAcc===false">Create Account</h1>
+      </div>
+      <div class="form__warning">
+        <mat-card *ngIf="loginAgain$ | async">
+          <mat-card-content>
+            Please login to your account to get to the form-builder page
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <mat-error *ngIf="auth.error$ | async as error">{{error}}</mat-error>
+      <mat-form-field class="login-form__input-control">
+        <mat-label>Login</mat-label>
+        <input matInput formControlName="email">
+        <mat-error *ngIf="formGroup.hasError('email', 'email') && !formGroup.hasError('required', 'email')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="formGroup.hasError('required', 'email')">
+          Email is not <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <hr>
+      <mat-form-field class="login-form__input-control">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+        <mat-error *ngIf="formGroup.hasError('minLength', 'password') && !formGroup.hasError('required', 'password')">
+          Password must have more then 6 symbols length
+        </mat-error>
+        <mat-error *ngIf="formGroup.hasError('required', 'password')">
+          Password is not <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <div class="login-form__input-control">
+        <button *ngIf="haveAcc===true" mat-raised-button color="primary"
+          [disabled]="formGroup.invalid || !!formError || submitted" class="login-form__submit">Sign
+          in</button>
+        <button *ngIf="haveAcc===false" mat-raised-button color="primary"
+          [disabled]="formGroup.invalid || !!formError || submitted" class="login-form__submit">Sing Up</button>
+        <mat-error *ngIf="formError">{{formError}}</mat-error>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="loading$ | async">
+    <app-loader></app-loader>
+  </div>
+</div>

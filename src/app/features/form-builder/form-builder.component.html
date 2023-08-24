@@ -1,0 +1,21 @@
+<app-header></app-header>
+<mat-grid-list cols="3" rowHeight="750px" class="main">
+
+  <mat-grid-tile>
+    <app-form-styles class="form-block"></app-form-styles>
+  </mat-grid-tile>
+
+  <div cdkDropListGroup>
+
+    <mat-grid-tile>
+      <app-form-elements (toDrop)="drop($event)" [styles]="styles" [selectedElements]="selectedElements"
+        class="form-block">
+      </app-form-elements>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <app-list-elements (toDrop)="drop($event)" [listElements]="listElements" class="form-block"></app-list-elements>
+    </mat-grid-tile>
+
+  </div>
+</mat-grid-list>

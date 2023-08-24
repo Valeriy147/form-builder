@@ -1,0 +1,47 @@
+@import "nullstyles.scss";
+
+$ff: 'Montserrat';
+$fw: 400;
+$fs: normal;
+$fs-l: 36px;
+$fs-m: 18px;
+$fs-s: 14px;
+$lh-l: 44px;
+$lh-m: 22px;
+$lh-s: 17px;
+
+.text{
+  font-family: $ff;
+  font-style: $fs;
+  font-weight: $fw;
+  font-size: $fs-s;
+  line-height: $lh-s;
+  &.text_middle{
+    font-size: $fs-m;
+    line-height: $lh-m;
+  }
+  &.text_large{
+    font-size: $fs-l;
+    line-height: $lh-l;
+  }
+}
+.field-container{
+  width: 97%;
+}
+
+.button{
+  background: #EEF2F4;
+  border-radius: 4px;
+  width: 155px;
+  height: 30px;
+  border: none;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mat-grid-tile-content {
+    align-items: flex-start !important;
+}

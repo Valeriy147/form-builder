@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <div *ngIf="fieldsLoading$ | async">
+    <app-loader class="loader"></app-loader>
+  </div>
+  <div *ngIf="fieldsError$| async as error">
+    <mat-error>{{error}}</mat-error>
+  </div>
+  <div *ngIf="!(fieldsLoading$ | async)" cdkDropList [cdkDropListData]="listElements" cdkDropListSortingDisabled
+    class="wrapper__list" (cdkDropListDropped)="drop($event)">
+    <div class="text wrapper__box" *ngFor="let field of listElements; let i = index" cdkDrag>
+      {{field[0].toUpperCase() + field.slice(1)}}
+      <div *cdkDragPlaceholder>
+        <div class="border">
+          <div *ngIf="field === 'input'" class="selected-form__input">
+            <input type="text" value="Input label" />
+          </div>
+          <div *ngIf="field === 'textarea'" class="selected-form__textarea">
+            <textarea type="text">Textarea label</textarea>
+          </div>
+          <div *ngIf="field === 'checkbox'" class="selected-form__checkbox">
+            <div class="text text-middle checkbox-label">Checkbox label</div>
+            <input type="checkbox" id=`check` value="option">
+            <label for=`check`>option</label>
+          </div>
+          <div *ngIf="field === 'select'" class="selected-form__select">
+            <select>
+              <option selected>Select label</option>
+            </select>
+          </div>
+          <div *ngIf="field === 'button'" class="selected-form__button">
+            <button>Button label</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

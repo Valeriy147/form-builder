@@ -1,0 +1,27 @@
+<form [formGroup]="generalForm" (ngSubmit)="applyFormStyles()">
+  <div class="validation" *ngIf="generalForm.get('label')?.invalid">
+    <mat-error>this field length must not be more then 50 symbols</mat-error>
+  </div>
+  <app-text-input [label]="'Form label'" [formControlName]="'label'"></app-text-input>
+
+
+  <div class="style-container">
+
+    <app-color-input [label]="'Text Color'" [formControlName]="'textColor'" class="style"></app-color-input>
+
+    <app-color-input [label]="'Background'" [formControlName]="'backgroundColor'" class="style"></app-color-input>
+
+    <div *ngIf="borderTypes$ | async as borderTypes" class="style">
+      <app-selector [items]="borderTypes" [label]="'Border Type'" [formControlName]="'borderType'">
+      </app-selector>
+    </div>
+
+    <app-color-input [label]="'Border Color'" [formControlName]="'borderColor'" class="style"></app-color-input>
+
+  </div>
+
+  <div class="button-container"> <button class="button" mat-raised-button type="submit"
+      [disabled]="generalForm.invalid">Apply</button>
+  </div>
+
+</form>

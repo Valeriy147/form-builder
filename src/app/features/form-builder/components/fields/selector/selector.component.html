@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill" class="field-container">
+  <mat-label>{{label}}</mat-label>
+  <mat-select contenteditable [value]="value" (blur)="onEditorValueChange($event)">
+    <mat-option *ngFor="let item of items" [value]="item">
+      {{item}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

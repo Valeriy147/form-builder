@@ -1,0 +1,32 @@
+.style{
+  display: inline-block;
+  width: 47%;
+}
+
+.style__container{
+  justify-content: center;
+  text-align: center;
+}
+
+.required{
+  margin-left: 10px;
+  text-align:left;
+}
+
+.option{
+  display: flex;
+  width: 90%;
+  margin-bottom: -1.3em;
+}
+
+.add-option{
+  display: flex;
+  height: 75%;
+}
+
+.add-option__button{
+  height: 100%;
+}
+.submit-styles{
+  margin-top: 20px;
+}

@@ -1,0 +1,5 @@
+<mat-form-field class="field-container">
+  <mat-label>{{label}}</mat-label>
+  <input matInput type="number" contenteditable [value]="value" (keyup)="onEditorValueChange($event)">
+  <span matTextSuffix>px</span>
+</mat-form-field>

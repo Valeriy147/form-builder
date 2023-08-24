@@ -1,0 +1,85 @@
+<form [formGroup]="elementsForm" (ngSubmit)="applyElementsStyles()">
+  <div *ngIf="selectedStyles$ | async as selectedStyles" class="style__container">
+
+    <div *ngIf="borderTypesLoading$ | async">
+      <app-loader></app-loader>
+    </div>
+
+    <div *ngIf="borderTypesError$ | async as error">
+      <mat-error>{{error}}</mat-error>
+    </div>
+
+    <div *ngIf="!(borderTypesLoading$ | async)">
+      <div *ngFor="let style of selectedStyles; let i = index" class="style">
+
+        <div *ngIf="style === 'label' || style === 'placeholder' || style === 'checkbox option'">
+          <app-text-input *ngIf="style.split(' ')[1]" [label]="style" [formControlName]="style | nameForFormControl">
+          </app-text-input>
+          <app-text-input *ngIf="!style.split(' ')[1]" [label]="style" [formControlName]="style">
+          </app-text-input>
+        </div>
+
+        <div *ngIf="style ===
+          'text color' ||
+          style === 'border color' ||
+          style ===  'color'  ||
+          style ===  'background color' ||
+          style === 'color input'">
+          <app-color-input *ngIf="style.split(' ')[1]" [label]="style" [formControlName]="style | nameForFormControl">
+          </app-color-input>
+          <app-color-input *ngIf="!style.split(' ')[1]" [label]="style" [formControlName]="style">
+          </app-color-input>
+        </div>
+
+        <div *ngIf="style === 'width' || style === 'height' || style === 'font size' || style === 'font weight'">
+          <div class="validation" *ngIf="style.split(' ')[1] && elementsForm.get(style|nameForFormControl)?.invalid">
+            <mat-error>max value = {{elementsForm.get(style|nameForFormControl)?.errors!['max']['max'] }}
+            </mat-error>
+          </div>
+          <div class="validation" *ngIf="!style.split(' ')[1] && elementsForm.get(style)?.invalid">
+            <mat-error>max value = </mat-error>
+          </div>
+          <app-number-input *ngIf="style.split(' ')[1]" [label]="style" [formControlName]="style | nameForFormControl">
+          </app-number-input>
+          <app-number-input *ngIf="!style.split(' ')[1]" [label]="style" [formControlName]="style">
+          </app-number-input>
+        </div>
+
+        <div *ngIf="style === 'border type'">
+          <div *ngIf="borderTypes$ | async as borderTypes">
+            <app-selector [items]="borderTypes" [label]="'Border Type'" [formControlName]="'borderType'">
+            </app-selector>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div *ngIf="selectedStyles.includes('required')" class="required">
+      <app-checkbox [label]="'Required field'" [formControlName]="'required'">
+      </app-checkbox>
+    </div>
+    <div *ngIf="selectedStyles.length > 0" class="submit-styles">
+      <mat-grid-list cols="2" rowHeight="70px">
+        <mat-grid-tile>
+          <button class="button" type="submit" [disabled]="elementsForm.invalid" mat-raised-button>Apply</button>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <button class="button" type="button" (click)="delete()" mat-raised-button>Delete</button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+    <div *ngIf="selectedStyles.indexOf('options') != -1" class="style-container">
+      <mat-grid-list cols="5" rowHeight="70px">
+        <mat-grid-tile [colspan]="4">
+          <app-text-input class="option" [label]="'Add field'" [formControlName]="'option'"></app-text-input>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1">
+          <div class="add-option">
+            <button (click)="addOption()" type="button" class="add-option__button" mat-raised-button>Add</button>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</form>

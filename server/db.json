@@ -1,0 +1,780 @@
+{
+  "fields": [
+    {
+      "id": 1,
+      "type": "input",
+      "styles": [
+        "label",
+        "placeholder",
+        "width",
+        "height",
+        "font size",
+        "font weight",
+        "color input",
+        "border type",
+        "border color",
+        "required"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "textarea",
+      "styles": [
+        "label",
+        "placeholder",
+        "width",
+        "height",
+        "font size",
+        "font weight",
+        "color input",
+        "border type",
+        "border color",
+        "required"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "button",
+      "styles": [
+        "label",
+        "width",
+        "height",
+        "font size",
+        "font weight",
+        "color",
+        "border type",
+        "border color",
+        "background color"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "checkbox",
+      "styles": [
+        "label",
+        "font size",
+        "font weight",
+        "color",
+        "border type",
+        "border color",
+        "checkbox option",
+        "required"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "select",
+      "styles": [
+        "label",
+        "width",
+        "height",
+        "font size",
+        "font weight",
+        "color input",
+        "border type",
+        "border color",
+        "required",
+        "options"
+      ]
+    }
+  ],
+  "borderTypes": [
+    "dotted",
+    "dashed",
+    "solid",
+    "double",
+    "groove",
+    "ridge",
+    "inset",
+    "outset",
+    "none",
+    "hidden"
+  ],
+  "savedForms": [
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "gfg",
+            "textColor": null,
+            "placeholder": null,
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": null,
+            "colorInput": null,
+            "backgroundColor": null,
+            "borderType": null,
+            "borderColor": null,
+            "color": null,
+            "option": null
+          }
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        }
+      ],
+      "id": 3
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        }
+      ],
+      "id": 4
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        },
+        {
+          "id": 1,
+          "type": "button",
+          "styles": {}
+        }
+      ],
+      "id": 5
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        },
+        {
+          "id": 1,
+          "type": "button",
+          "styles": {}
+        }
+      ],
+      "id": 6
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        },
+        {
+          "id": 1,
+          "type": "button",
+          "styles": {}
+        }
+      ],
+      "id": 7
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        },
+        {
+          "id": 1,
+          "type": "button",
+          "styles": {}
+        }
+      ],
+      "id": 8
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        },
+        {
+          "id": 1,
+          "type": "button",
+          "styles": {}
+        }
+      ],
+      "id": 9
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        },
+        {
+          "id": 1,
+          "type": "button",
+          "styles": {}
+        }
+      ],
+      "id": 10
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        },
+        {
+          "id": 1,
+          "type": "button",
+          "styles": {}
+        }
+      ],
+      "id": 11
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        },
+        {
+          "id": 1,
+          "type": "button",
+          "styles": {}
+        }
+      ],
+      "id": 12
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        },
+        {
+          "id": 1,
+          "type": "button",
+          "styles": {}
+        }
+      ],
+      "id": 13
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        },
+        {
+          "id": 1,
+          "type": "button",
+          "styles": {}
+        }
+      ],
+      "id": 14
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        },
+        {
+          "id": 1,
+          "type": "button",
+          "styles": {}
+        }
+      ],
+      "id": 15
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderType": ""
+      },
+      "formElements": [
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        }
+      ],
+      "id": 16
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "",
+        "textColor": "",
+        "backgroundColor": "",
+        "borderType": "none",
+        "borderColor": ""
+      },
+      "formElements": [
+        {
+          "id": 10,
+          "type": "textarea",
+          "styles": {}
+        },
+        {
+          "id": 4,
+          "type": "textarea",
+          "styles": {}
+        },
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        }
+      ],
+      "id": 17
+    },
+    {
+      "userLogin": "user@gmail.com",
+      "formStyles": {
+        "label": "wegdfhdf",
+        "textColor": "#d61f1f",
+        "backgroundColor": "#bf5a5a",
+        "borderType": "dashed",
+        "borderColor": "#9c2626"
+      },
+      "formElements": [
+        {
+          "id": 2,
+          "type": "textarea",
+          "styles": {}
+        },
+        {
+          "id": 0,
+          "type": "input",
+          "styles": {
+            "label": "",
+            "textColor": "",
+            "placeholder": "",
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": false,
+            "colorInput": "",
+            "backgroundColor": "",
+            "borderType": "",
+            "borderColor": "",
+            "color": "",
+            "options": []
+          }
+        },
+        {
+          "id": 1,
+          "type": "button",
+          "styles": {
+            "label": "sdgsdgsdg",
+            "textColor": null,
+            "placeholder": null,
+            "width": null,
+            "height": null,
+            "fontSize": null,
+            "fontWeight": null,
+            "required": null,
+            "colorInput": null,
+            "backgroundColor": null,
+            "borderType": null,
+            "borderColor": null,
+            "color": null,
+            "option": null,
+            "checkboxOption": null
+          }
+        }
+      ],
+      "id": 18
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+<div *ngIf="formElements$ | async as formElements">
+  <div *ngIf="formStyles$ | async as formStyles">
+    <div [ngStyle]="formStyles | style" class="selected-form wrapper overflow">
+      <div *ngIf="formStyles.label; else noName" class="text text_middle selected-form__label">{{formStyles.label}}
+      </div>
+      <ng-template #noName>
+        <div class="text text_middle selected-form__label">Form Label
+        </div>
+      </ng-template>
+      <form [formGroup]="form">
+        <div cdkDropList [cdkDropListData]="selectedElements" class="selected-form__list" cdkDropListDisabled
+          (cdkDropListDropped)="drop($event)">
+          <div class="text selected-form__elements" *ngFor="let item of formElements; let i = index" cdkDrag>
+            <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+            <div [ngClass]="{'selected': selectedElement === item.id}" class="border"
+              (click)="(selectElement(item, i))">
+
+              <div *ngIf="item.type==='input'" class="selected-form__input">
+                <input [ngStyle]="item.styles | style" type="text" placeholder="{{itemDetails(item).placeholder}}"
+                  formControlName="{{item.id}}">
+                <div class="validation"
+                  *ngIf="form.get((item.id).toString())?.invalid && form.get((item.id).toString())?.touched">
+                  <mat-error>this field must not be empty</mat-error>
+                </div>
+              </div>
+
+              <div *ngIf="item.type === 'button'" class="selected-form__button">
+                <button [ngStyle]="item.styles | style" [disabled]="form.invalid">{{itemDetails(item).value}}</button>
+              </div>
+
+              <div *ngIf="item.type === 'textarea'" class="selected-form__textarea">
+                <textarea [ngStyle]="item.styles | style" name="" id="" cols="30" rows="5"
+                  placeholder="{{itemDetails(item).placeholder}}" formControlName="{{item.id}}"></textarea>
+                <div class="validation"
+                  *ngIf="form.get((item.id).toString())?.invalid && form.get((item.id).toString())?.touched">
+                  <mat-error>this field must not be empty</mat-error>
+                </div>
+              </div>
+
+              <div *ngIf="item.type === 'checkbox'" class="selected-form__checkbox">
+                <div *ngIf="item.styles.label" class="text text-middle checkbox-label">{{item.styles.label}}</div>
+                <div *ngIf="!item.styles.label" class="text text-middle checkbox-label">Checkbox label</div>
+                <input [ngStyle]="(item.styles | style)" type="checkbox" id=`check{{i}}` value="option"
+                  formControlName="{{item.id}}">
+                <label *ngIf="item.styles.checkboxOption" for=`check{{i}}`
+                  [ngStyle]="item.styles | style">{{item.styles.checkboxOption}}</label>
+                <label *ngIf="!item.styles.checkboxOption" for=`check{{i}}`
+                  [ngStyle]="item.styles | style">option</label>
+                <div class="validation"
+                  *ngIf="form.get((item.id).toString())?.invalid && form.get((item.id).toString())?.touched">
+                  <mat-error>this field must not be empty</mat-error>
+                </div>
+              </div>
+
+              <div *ngIf="item.type === 'select'" class="selected-form__select">
+                <select [ngStyle]="item.styles | style" formControlName="{{item.id}}">
+                  <option *ngIf="item.styles.label" value={{item.styles.label}} disabled selected>{{item.styles.label}}
+                  </option>
+                  <option *ngIf="!item.styles.label" value="" disabled selected>Select label
+                  </option>
+                  <option *ngFor="let option of item.styles.options">{{option}}</option>
+                </select>
+                <div class="validation"
+                  *ngIf="form.get((item.id).toString())?.invalid && form.get((item.id).toString())?.touched">
+                  <mat-error>this field must not be empty</mat-error>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div *ngIf="userLogin$ | async as userLogin" class="button-container">
+      <button mat-raised-button (click)="saveForm(userLogin, formStyles, formElements)" class="button">Save
+        form</button>
+      <mat-error *ngIf="savingError$ | async as error">{{error}}</mat-error>
+    </div>
+    <div *ngIf="savingLoading$ | async">
+      <app-loader></app-loader>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<mat-form-field class="field-container">
+  <mat-label>{{label}}</mat-label>
+  <input matInput type="color" contenteditable [value]="value" (change)="onEditorValueChange($event)">
+  <span matTextSuffix>RGB</span>
+</mat-form-field>
